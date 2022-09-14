@@ -1,6 +1,6 @@
 {
   "name": "vue-gtag",
-  "description": "Global Site Tag (gtag.js) plugin for Vue",
+  "description": "Global Site Tag (gtag.js) plugin for Vue with nonce",
   "version": "0.0.0-development",
   "author": {
     "name": "Matteo Gabriele",
@@ -14,7 +14,7 @@
   "scripts": {
     "commit": "git-cz",
     "clean": "del-cli dist",
-    "prebuild": "yarn clean",
+    "prebuild": "npm run clean",
     "build": "bili",
     "dev": "NODE_ENV=dev bili --watch",
     "lint": "eslint --ext .js .",
