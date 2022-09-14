@@ -23,6 +23,7 @@ export const getDefaultParams = () => ({
   globalObjectName: "gtag",
   defaultGroupName: "default",
   includes: null,
+  nonce: null,
   config: {
     id: null,
     params: {

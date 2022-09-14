@@ -10,6 +10,7 @@ export const load = (url, options = {}) => {
     script.async = true;
     script.src = url;
     script.defer = options.defer;
+    script.nonce = options.nonce;
 
     if (options.preconnectOrigin) {
       const link = document.createElement("link");
