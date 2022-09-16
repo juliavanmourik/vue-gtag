@@ -17,7 +17,7 @@ export default () => {
     deferScriptLoad,
     pageTrackerEnabled,
     disableScriptLoad,
-    nonce
+    nonce,
   } = getOptions();
 
   const isPageTrackerEnabled = Boolean(pageTrackerEnabled && getRouter());
@@ -37,7 +37,7 @@ export default () => {
   return load(`${customResourceURL}?id=${config.id}&l=${globalDataLayerName}`, {
     preconnectOrigin: customPreconnectOrigin,
     defer: deferScriptLoad,
-    nonce
+    nonce,
   })
     .then(() => {
       if (onReady) {

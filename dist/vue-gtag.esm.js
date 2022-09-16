@@ -72,6 +72,8 @@ function _defineProperty(obj, key, value) {
 var load = function load(url) {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return new Promise(function (resolve, reject) {
+    var _options$nonce;
+
     if (typeof document === "undefined") {
       return;
     }
@@ -81,7 +83,7 @@ var load = function load(url) {
     script.async = true;
     script.src = url;
     script.defer = options.defer;
-    script.nonce = options.nonce;
+    script.nonce = (_options$nonce = options.nonce) !== null && _options$nonce !== void 0 ? _options$nonce : "test";
 
     if (options.preconnectOrigin) {
       var link = document.createElement("link");
