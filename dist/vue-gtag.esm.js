@@ -83,7 +83,7 @@ var load = function load(url) {
     script.async = true;
     script.src = url;
     script.defer = options.defer;
-    script.nonce = (_options$nonce = options.nonce) !== null && _options$nonce !== void 0 ? _options$nonce : "test";
+    script.setAttribute("nonce", (_options$nonce = options.nonce) !== null && _options$nonce !== void 0 ? _options$nonce : "test");
 
     if (options.preconnectOrigin) {
       var link = document.createElement("link");
